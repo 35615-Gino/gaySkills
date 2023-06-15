@@ -10,7 +10,7 @@ public class Tank : MonoBehaviour
     Vector2 maxView;
 
     public Bullet bullet;
-
+    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +50,7 @@ public class Tank : MonoBehaviour
             Bullet newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
             newBullet.velocity = velocity;
             newBullet.speed = 10f;
+            audio.Play();
         }
     }
 
