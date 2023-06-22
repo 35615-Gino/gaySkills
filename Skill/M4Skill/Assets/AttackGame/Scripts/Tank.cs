@@ -24,13 +24,13 @@ public class Tank : MonoBehaviour
         BorderControl();
         transform.position += velocity * speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.localEulerAngles += new Vector3(0, 0, -10);
             velocity = Quaternion.Euler(0, 0, -10) * velocity;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.localEulerAngles += new Vector3(0, 0, 10);
             velocity = Quaternion.Euler(0, 0, 10) * velocity;
