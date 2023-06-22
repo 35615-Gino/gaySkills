@@ -24,4 +24,9 @@ public class Smilers : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
 }
